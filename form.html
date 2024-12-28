@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APG | Tambah Pegawai</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>Aplikasi Manajemen Pegawai</header>
+
+    <div class="container">
+      <!-- menu -->
+      <aside>
+        <ul class="menu">
+          <li><a href="dashboard.html" class="aktif">Dashboard</a></li>
+          <li><a href="tabel.html">Data Pegawai</a></li>
+          <li><a href="tabel.html">Data Jabatan</a></li>
+          <li><a href="index.html">Keluar</a></li>
+        </ul>
+      </aside>
+
+      <!-- content -->
+      <section class="main">
+        <h2 class="judul">Tambah Pegawai</h2>
+        <form action="proses.php" method="post">
+          <!-- input foto -->
+          <div class="form-group">
+            <label for="foto">Foto</label>
+            <div class="input">
+              <input type="file" name="foto" id="foto" />
+            </div>
+          </div>
+
+          <!-- input nama -->
+          <div class="form-group">
+            <label for="nama">Nama</label>
+            <div class="input">
+              <input type="text" name="nama" id="nama" />
+            </div>
+          </div>
+
+          <!-- input gender -->
+          <div class="form-group">
+            <label for="jk">Jenis Kelamin</label>
+            <input type="radio" name="jk" id="jk" value="L" /> Laki-Laki
+            <input type="radio" name="jk" id="jk" value="P" /> Perempuan
+          </div>
+
+          <!-- input tanggal -->
+          <div class="form-group">
+            <label for="tanggal">Tanggal</label>
+            <div class="input">
+              <input type="date" name="tangga" id="tanggal" />
+            </div>
+          </div>
+
+          <!-- Jabatan -->
+          <div class="form-group">
+            <label for="jabatan">Jabatan</label>
+            <div class="input">
+              <select name="jabatan" id="jabatan">
+                <option value="">- Pilih Jabatan -</option>
+                <option value="1">Direktur</option>
+                <option value="2">Marketing</option>
+                <option value="3">Sales</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- submit & reset -->
+          <div class="form-group">
+            <input type="submit" value="Simpan" class="tombol simpan" />
+            <input type="reset" value="Batal" class="tombol reset" />
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <footer>Copyright &copy; Asatidzal Hakiim</footer>
+  </body>
+</html>
