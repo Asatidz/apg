@@ -1,0 +1,54 @@
+/* css file login */
+
+* {
+  box-sizing: border-box;
+}
+
+/* mengatur font dan background halaman */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: purple;
+}
+
+/* membuat container menjadi flex box dan kotak login di tengah */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* membuat kotak login form lear 400px dan background putih */
+.login-box {
+  margin-top: 150px;
+  flex-basis: 400px;
+  background: #fff;
+  padding: 20px;
+}
+
+/* mengatur judul form dengan border bawah dan posisi di tengah */
+.login-box h2 {
+  border-bottom: 1px solid #ccc;
+  color: #555;
+  text-align: center;
+  padding-bottom: 20px;
+  margin: 0 0 20px;
+}
+
+/* mengatur agar tag input dan select memenuhi container dan tampilan mening */
+input,
+select {
+  width: 100%;
+  padding: 15px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+}
+
+/* mengatur tampilan tombol submit */
+input[type="submit"] {
+  background-color: purple;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
