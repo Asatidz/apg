@@ -115,3 +115,58 @@ footer {
 .menu a:hover {
   background: #000;
 }
+
+/* ======================= */
+/* Tabel Data Pegawai */
+/* ======================= */
+/* mengatur desain judul halaman dengan border  */
+.judul {
+  color: #555;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+/* mengatur lebar tabel penuh dan antaer boordor tdk memmiliki jarak */
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+/* menambahkan border dan pading pada sel tambahan */
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* background judul table */
+.table th {
+  background: #eee;
+}
+
+/* mengatur desain tombol tag <a> */
+.tombol {
+  display: inline-block;
+  max-width: 150px;
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  background: purple;
+  cursor: pointer;
+}
+
+/* desian tombol eit ddan haus */
+.tombol.edit,
+.tombol.hapus {
+  padding: 10px 15px;
+  font-size: 12px;
+}
+
+.tombol.hapus {
+  background: #fc4c4c;
+}
+
+.table tr {
+  text-align: center;
+}
