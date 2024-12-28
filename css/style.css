@@ -52,3 +52,66 @@ input[type="submit"] {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* ======================= */
+/* style halaman dashboard */
+/* ======================= */
+header {
+  background: purple;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 20px;
+}
+
+/* mengatur lebar menu */
+aside {
+  flex: 20%;
+  background: #222;
+}
+
+/* mengatur lebar konten  */
+section.main {
+  flex: 80%;
+  background: #fff;
+  min-height: 530px;
+  padding: 15px 20px;
+}
+
+/* mengatur footer dn teks ditengah */
+footer {
+  background: #ccc;
+  color: #555;
+  padding: 20px;
+  text-align: center;
+}
+
+/* mengatur layout(responsive) */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* navigas dan membuang pading */
+.menu {
+  padding: 0;
+}
+
+/* menambah border bawah */
+.menu li {
+  border-bottom: 1px solid dotted #444;
+  list-style: none;
+}
+
+/* mengatur desain mneu yang dibuat dengan tag a */
+.menu a {
+  display: block;
+  padding: 20px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* mengammbil background menu ketika ditunjuk mouse */
+.menu a:hover {
+  background: #000;
+}
