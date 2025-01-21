@@ -1,3 +1,7 @@
+<?php
+    if(!defined('INDEX')) die("");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <title>Login Aplikasi</title> -->
     <!-- HTML Meta Tags -->
-    <title>Aplikasi Manajemen Pegawai1</title>
+    <title>Aplikasi Manajemen Pegawai</title>
     <meta
       name="description"
       content="Aplikasi Pengelolaan Data Pegawai Perusahaan"
@@ -43,25 +47,55 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- header -->
+    <header>Aplikasi Manajemen Pegawai</header>
+
     <div class="container">
-      <section class="login-box">
-        <h2>Login Aplikasi</h2>
-        <form action="ceklogin.php" method="post">
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
-          />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-          />
-          <input type="submit" value="Login" />
-        </form>
-      </section>
+      <!-- menu -->
+      <aside>
+        <ul class="menu">
+          <li><a href="dashboard.html" class="aktif">Dashboard</a></li>
+          <li><a href="tabel.html">Data Pegawai</a></li>
+          <li><a href="tabel.html">Data Jabatan</a></li>
+          <li><a href="index.html">Keluar</a></li>
+        </ul>
+      </aside>
+
+      <!-- content -->
+      <section class="main">
+        <h2 class="judul">Data Pegawai</h2>
+        <a href="form.html" class="tombol">Tambah</a>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Jabatan</th>
+              <th>Nama</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+                $query = "select * from jabatan by id_jabatan desc";
+                $result = mysqli_query($con,$query);
+                $no = 0;
+                while($data = mysqli_fetch_array($result)){
+                    $no++;
+                
+            ?>
+            <tr>
+              <td><?= $no ?></td>
+              <td><?= $data['nama_jabatan'] ?></td>
+              <td>
+                <a href="?hal=jabatan_edit&id=<?= $data['id_jabatan'] ?>" class="tombol edit"> Edit </a>
+                <a href="?hal=jabatan_hapus&id=<?= $data['id_jabatan'] ?>" class="tombol hapus"> Hapus </a>
+              </td>
+            </tr>
+        <?php
+        }
+        ?>
+          </tbody>
+        </table>
     </div>
   </body>
 </html>
