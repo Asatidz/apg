@@ -14,7 +14,8 @@ $halaman = [
     "jabatan_insert",
     "jabatan_edit",
     "jabatan_update",
-    "jabatan_hapus"
+    "jabatan_hapus",
+    "halo"
 ];
 
 if (isset($_GET['hal'])) {

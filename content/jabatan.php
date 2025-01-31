@@ -44,39 +44,27 @@
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
     <link rel="shortcut icon" href="img/officer.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css" />
+
   </head>
   <body>
-    <!-- header -->
-    <header>Aplikasi Manajemen Pegawai</header>
 
-    <div class="container">
-      <!-- menu -->
-      <aside>
-        <ul class="menu">
-          <li><a href="dashboard.html" class="aktif">Dashboard</a></li>
-          <li><a href="tabel.html">Data Pegawai</a></li>
-          <li><a href="tabel.html">Data Jabatan</a></li>
-          <li><a href="index.html">Keluar</a></li>
-        </ul>
-      </aside>
+
 
       <!-- content -->
       <section class="main">
-        <h2 class="judul">Data Pegawai</h2>
-        <a href="form.html" class="tombol">Tambah</a>
+        <h2 class="judul">Data Jabatan</h2>
+        <a href="?hal=jabatan_tambah" class="tombol">Tambah</a>
         <table class="table">
           <thead>
             <tr>
               <th>No</th>
               <th>Nama Jabatan</th>
-              <th>Nama</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
             <?php
-                $query = "select * from jabatan by id_jabatan desc";
+                $query = "select * from jabatan order by id_jabatan desc";
                 $result = mysqli_query($con,$query);
                 $no = 0;
                 while($data = mysqli_fetch_array($result)){
@@ -96,6 +84,6 @@
         ?>
           </tbody>
         </table>
-    </div>
+   
   </body>
 </html>

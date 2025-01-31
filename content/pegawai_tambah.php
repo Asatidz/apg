@@ -56,6 +56,6 @@ while($data = mysqli_fetch_assoc($result)){
 
     <div class="form-group">
         <input type="submit" value="Simpan" class="tombol simpan">
-        <input type="reset" value="Batal" class="tombol reset">
+        <input type="reset" value="Reset" class="tombol reset">
     </div>
 </form>

@@ -4,7 +4,7 @@ if(!defined('INDEX')) die("");
 
 $id = $_POST['id'];
 $nama = $_POST['nama'];
-$query = "update into jabatan set nama_jabatan = '$nama' where id_jabatan = '$id'";
+$query = "update jabatan set nama_jabatan = '$nama' where id_jabatan = '$id'";
 $result = mysqli_query($con,$query);
 
 if ($result) {

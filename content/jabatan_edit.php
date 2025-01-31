@@ -11,7 +11,7 @@ $data = mysqli_fetch_assoc($result);
 
 
 <h2 class="judul">Edit Pegawai</h2>
-        <form action="?hal=jabatan_insert" method="post">
+        <form action="?hal=jabatan_update" method="post">
           <!-- input foto -->
            <input type="hidden" name="id" value="<?= $data['id_jabatan']?>">
           <div class="form-group">

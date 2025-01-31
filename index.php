@@ -3,6 +3,7 @@ session_start();
 ob_start();
 
 include "library/config.php";
+
 if(empty($_SESSION['username']) OR empty($_SESSION['password'])) {
     echo "<p align='center'>Anda Harus Login Sek Brohh!!</p>";
     echo "<meta http-equiv='refresh' content='2; url=login.php'>";
@@ -63,10 +64,10 @@ if(empty($_SESSION['username']) OR empty($_SESSION['password'])) {
       <!-- menu -->
       <aside>
         <ul class="menu">
-          <li><a href="dashboard.html" class="aktif">Dashboard</a></li>
-          <li><a href="tabel.html">Data Pegawai</a></li>
-          <li><a href="tabel.html">Data Jabatan</a></li>
-          <li><a href="index.html">Keluar</a></li>
+          <li><a href="?hal=dashboard" class="aktif">Dashboard</a></li>
+          <li><a href="?hal=pegawai">Data Pegawai</a></li>
+          <li><a href="?hal=jabatan">Data Jabatan</a></li>
+          <li><a href="?hal=logout.php">Keluar</a></li>
         </ul>
       </aside>
 
