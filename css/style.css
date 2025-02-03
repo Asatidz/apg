@@ -214,3 +214,12 @@ input[type="radio"] {
     width: 100%;
   }
 }
+
+table img {
+  width: 80px; /* Atur lebar sesuai kebutuhan */
+  height: auto; /* Biarkan tinggi menyesuaikan */
+  max-height: 100px; /* Batasi tinggi maksimal */
+  object-fit: cover; /* Menjaga proporsi gambar */
+  display: block;
+  margin: auto;
+}

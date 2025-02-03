@@ -33,7 +33,7 @@ while($data = mysqli_fetch_assoc($result)){
 
 <tr>
     <td><?=$no;?></td>
-    <td><img src="images/<?=$data['foto']?>" alt="" width="100"></td>
+    <td><img src="images/<?=$data['foto']?>" style="width: 90px; height: 90px; object-fit: cover;"></td>
     <td><?=$data['nama_pegawai']?></td>
     <td><?=$data['jenis_kelamin']?></td>
     <td><?=$data['tgl_lahir']?></td>
