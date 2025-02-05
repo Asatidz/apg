@@ -72,7 +72,7 @@ aside {
 /* mengatur lebar konten  */
 section.main {
   flex: 80%;
-  background: #fff;
+  background: #fff; 
   min-height: 530px;
   padding: 15px 20px;
 }

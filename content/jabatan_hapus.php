@@ -2,7 +2,7 @@
 if(!defined('INDEX')) die("");
 
 
-$id = $_GET['id'];
+$id = $_GET['id']; 
 $query = "delete from jabatan where id_jabatan = '$id'";
 $result = mysqli_query($con,$query);
 
